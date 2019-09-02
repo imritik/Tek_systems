@@ -43,7 +43,7 @@ In this web application we are going to auto fill the registration form using an
 
 5.Run python manage.py runserver IP
 
-6.Copy and Paste the url into your browser.
+6.Copy and Paste the url into your browser and visit /home.
 
 <b>Notes:</b>
 <ul>
