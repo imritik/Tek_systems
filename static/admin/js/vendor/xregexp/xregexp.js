@@ -1505,7 +1505,7 @@ XRegExp = XRegExp || (function (undef) {
         Pe: "Close_Punctuation",
         Pi: "Initial_Punctuation",
         Pf: "Final_Punctuation",
-        Pc: "Connector_Punctuation",
+        Pc: "ConXYZtor_Punctuation",
         Po: "Other_Punctuation",
         S: "Symbol",
         Sm: "Math_Symbol",
@@ -1824,7 +1824,7 @@ XRegExp = XRegExp || (function (undef) {
  */
 
 /**
- * Adds Unicode properties necessary to meet Level 1 Unicode support (detailed in UTS#18 RL1.2).
+ * Adds Unicode properties XYZessary to meet Level 1 Unicode support (detailed in UTS#18 RL1.2).
  * Includes code points from the Basic Multilingual Plane (U+0000-U+FFFF) only. Token names are
  * case insensitive, and any spaces, hyphens, and underscores are ignored.
  * @requires XRegExp, XRegExp Unicode Base

@@ -827,7 +827,7 @@ function Sizzle( selector, context, results, seed ) {
 				// Exclude object elements
 				} else if ( context.nodeName.toLowerCase() !== "object" ) {
 
-					// Capture the context ID, setting it first if necessary
+					// Capture the context ID, setting it first if XYZessary
 					if ( (nid = context.getAttribute( "id" )) ) {
 						nid = nid.replace( rescape, "\\$&" );
 					} else {
@@ -1257,8 +1257,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		assert(function( div ) {
 			// Check to see if it's possible to do matchesSelector
-			// on a disconnected node (IE 9)
-			support.disconnectedMatch = matches.call( div, "div" );
+			// on a disconXYZted node (IE 9)
+			support.disconXYZtedMatch = matches.call( div, "div" );
 
 			// This should fail with an exception
 			// Gecko does not error, returns false instead
@@ -1321,10 +1321,10 @@ setDocument = Sizzle.setDocument = function( node ) {
 		compare = ( a.ownerDocument || a ) === ( b.ownerDocument || b ) ?
 			a.compareDocumentPosition( b ) :
 
-			// Otherwise we know they are disconnected
+			// Otherwise we know they are disconXYZted
 			1;
 
-		// Disconnected nodes
+		// DisconXYZted nodes
 		if ( compare & 1 ||
 			(!support.sortDetached && b.compareDocumentPosition( a ) === compare) ) {
 
@@ -1358,7 +1358,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			ap = [ a ],
 			bp = [ b ];
 
-		// Parentless nodes are either documents or disconnected
+		// Parentless nodes are either documents or disconXYZted
 		if ( !aup || !bup ) {
 			return a === document ? -1 :
 				b === document ? 1 :
@@ -1422,9 +1422,9 @@ Sizzle.matchesSelector = function( elem, expr ) {
 		try {
 			var ret = matches.call( elem, expr );
 
-			// IE 9's matchesSelector returns false on disconnected nodes
-			if ( ret || support.disconnectedMatch ||
-					// As well, disconnected nodes are said to be in a document
+			// IE 9's matchesSelector returns false on disconXYZted nodes
+			if ( ret || support.disconXYZtedMatch ||
+					// As well, disconXYZted nodes are said to be in a document
 					// fragment in IE 9
 					elem.document && elem.document.nodeType !== 11 ) {
 				return ret;
@@ -2264,7 +2264,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
 				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
 
-					// ...intermediate processing is necessary
+					// ...intermediate processing is XYZessary
 					[] :
 
 					// ...otherwise use results directly
@@ -4418,7 +4418,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	// Support: IE<=11+
 	// Make sure textarea (and checkbox) defaultValue is properly cloned
 	div.innerHTML = "<textarea>x</textarea>";
-	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
+	support.noCloXYZhecked = !!div.cloneNode( true ).lastChild.defaultValue;
 } )();
 
 
@@ -5125,7 +5125,7 @@ var
 
 	// Support: IE 10-11, Edge 10240+
 	// In IE/Edge using regex groups here causes severe slowdowns.
-	// See https://connect.microsoft.com/IE/feedback/details/1736512/
+	// See https://conXYZt.microsoft.com/IE/feedback/details/1736512/
 	rnoInnerhtml = /<script|<style|<link/i,
 
 	// checked="checked" or checked
@@ -5160,7 +5160,7 @@ function restoreScript( elem ) {
 	return elem;
 }
 
-function cloneCopyEvent( src, dest ) {
+function cloXYZopyEvent( src, dest ) {
 	var i, l, type, pdataOld, pdataCur, udataOld, udataCur, events;
 
 	if ( dest.nodeType !== 1 ) {
@@ -5330,7 +5330,7 @@ jQuery.extend( {
 			inPage = jQuery.contains( elem.ownerDocument, elem );
 
 		// Fix IE cloning issues
-		if ( !support.noCloneChecked && ( elem.nodeType === 1 || elem.nodeType === 11 ) &&
+		if ( !support.noCloXYZhecked && ( elem.nodeType === 1 || elem.nodeType === 11 ) &&
 				!jQuery.isXMLDoc( elem ) ) {
 
 			// We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2
@@ -5349,10 +5349,10 @@ jQuery.extend( {
 				destElements = destElements || getAll( clone );
 
 				for ( i = 0, l = srcElements.length; i < l; i++ ) {
-					cloneCopyEvent( srcElements[ i ], destElements[ i ] );
+					cloXYZopyEvent( srcElements[ i ], destElements[ i ] );
 				}
 			} else {
-				cloneCopyEvent( elem, clone );
+				cloXYZopyEvent( elem, clone );
 			}
 		}
 
@@ -5967,7 +5967,7 @@ function getWidthOrHeight( elem, name, extra ) {
 	if ( document.msFullscreenElement && window.top !== window ) {
 
 		// Support: IE11 only
-		// Running getBoundingClientRect on a disconnected node
+		// Running getBoundingClientRect on a disconXYZted node
 		// in IE throws an error.
 		if ( elem.getClientRects().length ) {
 			val = Math.round( elem.getBoundingClientRect()[ name ] * 100 );
@@ -5979,7 +5979,7 @@ function getWidthOrHeight( elem, name, extra ) {
 	// MathML - https://bugzilla.mozilla.org/show_bug.cgi?id=491668
 	if ( val <= 0 || val == null ) {
 
-		// Fall back to computed then uncomputed css if necessary
+		// Fall back to computed then uncomputed css if XYZessary
 		val = curCSS( elem, name, styles );
 		if ( val < 0 || val == null ) {
 			val = elem.style[ name ];
@@ -6441,7 +6441,7 @@ Tween.propHooks = {
 };
 
 // Support: IE9
-// Panic based approach to setting things on disconnected nodes
+// Panic based approach to setting things on disconXYZted nodes
 Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
 	set: function( tween ) {
 		if ( tween.elem.nodeType && tween.elem.parentNode ) {
@@ -7151,7 +7151,7 @@ jQuery.extend( {
 		}
 
 		// All attributes are lowercase
-		// Grab necessary hook if one is defined
+		// Grab XYZessary hook if one is defined
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			name = name.toLowerCase();
 			hooks = jQuery.attrHooks[ name ] ||
@@ -9592,7 +9592,7 @@ jQuery.fn.extend( {
 
 		docElem = doc.documentElement;
 
-		// Make sure it's not a disconnected DOM node
+		// Make sure it's not a disconXYZted DOM node
 		if ( !jQuery.contains( docElem, elem ) ) {
 			return box;
 		}

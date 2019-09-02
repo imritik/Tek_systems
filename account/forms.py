@@ -51,7 +51,7 @@ class VisitorForm(forms.ModelForm):
 class FilterForm(forms.ModelForm):
 	class Meta:
 		model = Visitor_perma
-		fields = ['name', 'pincode','date','uid','dob','address','purpose','phone','email','whoto']
+		fields = ['name', 'pincode','date','uid','dob','address','purpose','phone','whoto']
 
 
 # class FilterForm(forms.ModelForm):

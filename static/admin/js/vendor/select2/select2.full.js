@@ -232,7 +232,7 @@ var requirejs, require, define;
 
     /**
      * Makes a name map, normalizing the name, and using a plugin
-     * for normalization if necessary. Grabs a ref to plugin
+     * for normalization if XYZessary. Grabs a ref to plugin
      * too, as an optimization.
      */
     makeMap = function (name, relName) {
@@ -310,7 +310,7 @@ var requirejs, require, define;
         //Use name if no relName
         relName = relName || name;
 
-        //Call the callback to define the module, if necessary.
+        //Call the callback to define the module, if XYZessary.
         if (callbackType === 'undefined' || callbackType === 'function') {
             //Pull out the defined dependencies and pass the ordered
             //values to the callback.
@@ -5585,7 +5585,7 @@ S2.define('select2/core',[
     }
 
     if (this._observer != null) {
-      this._observer.disconnect();
+      this._observer.disconXYZt();
       this._observer = null;
     } else if (this.$element[0].removeEventListener) {
       this.$element[0]
@@ -6290,13 +6290,13 @@ S2.define('select2/selection/stopPropagation',[
         if ( !lowestDelta || absDelta < lowestDelta ) {
             lowestDelta = absDelta;
 
-            // Adjust older deltas if necessary
+            // Adjust older deltas if XYZessary
             if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
                 lowestDelta /= 40;
             }
         }
 
-        // Adjust older deltas if necessary
+        // Adjust older deltas if XYZessary
         if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
             // Divide all the things by 40!
             delta  /= 40;
