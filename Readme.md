@@ -32,6 +32,7 @@ In this web application we are going to auto fill the registration form using an
 </ul>
 
 <b>Testing:</b>
+
 1. pip install -r requirements.txt
 
 2.Install Apk
@@ -40,7 +41,7 @@ In this web application we are going to auto fill the registration form using an
 
 4.Make a collection named 'fda' in mongodb.
 
-5.Run python manage.py runserver <IP>
+5.Run python manage.py runserver IP
 
 6.Copy and Paste the url into your browser.
 

@@ -1,0 +1,22 @@
+<h1>Search Results</h1>
+
+<table class="table">
+  <tr class="row">
+    <th>Date</th>
+    <th>Name</th> 
+    <th>Phone</th>
+    <th>Purpose</th>
+    <th>Whoto</th>
+  </tr>
+
+    {% for event in object_list %} 
+    <tr class="row">
+    	<td>{{event.date}}</td>
+    	<td>{{ event.name }}</td>
+    	<td>{{ event.phone}}</td>
+    	<td>{{event.purpose}}</td>
+    	<td>{{event.whoto}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
